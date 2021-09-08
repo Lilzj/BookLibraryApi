@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace E_Book_Library.Models
+namespace EBook_Library.Models
 {
     public class AppUser : IdentityUser
     {

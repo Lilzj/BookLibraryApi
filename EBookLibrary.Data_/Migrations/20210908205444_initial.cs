@@ -171,6 +171,36 @@ namespace EBookLibrary.Data.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "BookActivities",
+                columns: table => new
+                {
+                    BookActivityId = table.Column<string>(type: "TEXT", nullable: false),
+                    BooksBookId = table.Column<string>(type: "TEXT", nullable: true),
+                    AppUsersId = table.Column<string>(type: "TEXT", nullable: true),
+                    PenaltyFee = table.Column<decimal>(type: "TEXT", nullable: false),
+                    NoOfDaysLate = table.Column<int>(type: "INTEGER", nullable: false),
+                    CheckOutDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    CheckInDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    ExpectedDateOfReturn = table.Column<DateTime>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BookActivities", x => x.BookActivityId);
+                    table.ForeignKey(
+                        name: "FK_BookActivities_AspNetUsers_AppUsersId",
+                        column: x => x.AppUsersId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_BookActivities_Books_BooksBookId",
+                        column: x => x.BooksBookId,
+                        principalTable: "Books",
+                        principalColumn: "BookId",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -207,6 +237,16 @@ namespace EBookLibrary.Data.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BookActivities_AppUsersId",
+                table: "BookActivities",
+                column: "AppUsersId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BookActivities_BooksBookId",
+                table: "BookActivities",
+                column: "BooksBookId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -227,13 +267,16 @@ namespace EBookLibrary.Data.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Books");
+                name: "BookActivities");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Books");
         }
     }
 }

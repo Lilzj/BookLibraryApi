@@ -1,4 +1,4 @@
-﻿using E_Book_Library.Models;
+﻿using EBook_Library.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace E_Book_Library.Infrastructure
+namespace EBook_Library.Data
 {
     public class EBookContext : IdentityDbContext<AppUser>
     {
@@ -16,5 +16,6 @@ namespace E_Book_Library.Infrastructure
         }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Book> Books { get; set; }
+        public DbSet<BookActivity> BookActivities { get; set; }
     }
 }

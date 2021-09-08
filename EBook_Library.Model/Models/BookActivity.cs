@@ -1,15 +1,15 @@
-﻿using E_Book_Library.Models;
-using EBook_Library.Common;
+﻿using EBook_Library.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EBook_Library.Model.Models
+namespace EBook_Library.Models
 {
     public class BookActivity
     {
+        public string BookActivityId { get; set; } = new Guid().ToString();
         public Book Books { get; set; }
         public AppUser AppUsers { get; set; }
         public decimal PenaltyFee { get; set; }
