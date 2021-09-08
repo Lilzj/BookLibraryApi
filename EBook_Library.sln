@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBook_Library.Model", "EBoo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBook_Library.Core", "EBook_Library.Core\EBook_Library.Core.csproj", "{D1002714-560A-4E09-AE56-E403774718E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBookLibrary.Data_", "EBookLibrary.Data_\EBookLibrary.Data_.csproj", "{246E8DB6-7108-41E3-AE02-03C04E37EF3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBookLibrary.Data", "EBookLibrary.Data_\EBookLibrary.Data.csproj", "{246E8DB6-7108-41E3-AE02-03C04E37EF3B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBook_Library.Common", "EBook_Library.Common\EBook_Library.Common.csproj", "{976EC543-ECAD-4F26-956B-353D9768AE4B}"
 EndProject

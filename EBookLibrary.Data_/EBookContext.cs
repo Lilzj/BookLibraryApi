@@ -11,6 +11,9 @@ namespace E_Book_Library.Infrastructure
 {
     public class EBookContext : IdentityDbContext<AppUser>
     {
+        public EBookContext(DbContextOptions<EBookContext> options) : base(options)
+        {
+        }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Book> Books { get; set; }
     }
