@@ -1,0 +1,23 @@
+[
+  {
+    "Title": "ASP.NET Core",
+    "ISBN": "123456789",
+    "PublishYear": "2019",
+    "CoverPrice": 3500.00,
+    "AvailabilityStatus": 1
+  },
+  {
+    "Title": "C# Fundamentals",
+    "ISBN": "873562534",
+    "PublishYear": "2018",
+    "CoverPrice": 4000.00,
+    "AvailabilityStatus": 1
+  },
+  {
+    "Title": "Angular in View",
+    "ISBN": "836537190",
+    "PublishYear": "2019",
+    "CoverPrice": 4500.00,
+    "AvailabilityStatus": 0
+  }
+]

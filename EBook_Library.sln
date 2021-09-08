@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBook_Library", "EBook_Library\EBook_Library.csproj", "{AC7AA924-865B-44A3-8CEB-88819D348ACA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EBook_Library", "EBook_Library\EBook_Library.csproj", "{AC7AA924-865B-44A3-8CEB-88819D348ACA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBook_Library.Model", "EBook_Library.Model\EBook_Library.Model.csproj", "{967BAA76-60DB-41A2-BBBE-FD2C565D2C40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EBook_Library.Model", "EBook_Library.Model\EBook_Library.Model.csproj", "{967BAA76-60DB-41A2-BBBE-FD2C565D2C40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBook_Library.Core", "EBook_Library.Core\EBook_Library.Core.csproj", "{D1002714-560A-4E09-AE56-E403774718E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EBook_Library.Core", "EBook_Library.Core\EBook_Library.Core.csproj", "{D1002714-560A-4E09-AE56-E403774718E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBookLibrary.Data", "EBookLibrary.Data_\EBookLibrary.Data.csproj", "{246E8DB6-7108-41E3-AE02-03C04E37EF3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EBook_Library.Common", "EBook_Library.Common\EBook_Library.Common.csproj", "{976EC543-ECAD-4F26-956B-353D9768AE4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBook_Library.Common", "EBook_Library.Common\EBook_Library.Common.csproj", "{976EC543-ECAD-4F26-956B-353D9768AE4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EBook_Library.Data", "EBook_Library.Data\EBook_Library.Data.csproj", "{07E3419A-6728-4C61-9B05-FA2D54C48AA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +31,14 @@ Global
 		{D1002714-560A-4E09-AE56-E403774718E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1002714-560A-4E09-AE56-E403774718E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1002714-560A-4E09-AE56-E403774718E1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{246E8DB6-7108-41E3-AE02-03C04E37EF3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{246E8DB6-7108-41E3-AE02-03C04E37EF3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{246E8DB6-7108-41E3-AE02-03C04E37EF3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{246E8DB6-7108-41E3-AE02-03C04E37EF3B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{976EC543-ECAD-4F26-956B-353D9768AE4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{976EC543-ECAD-4F26-956B-353D9768AE4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{976EC543-ECAD-4F26-956B-353D9768AE4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{976EC543-ECAD-4F26-956B-353D9768AE4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07E3419A-6728-4C61-9B05-FA2D54C48AA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07E3419A-6728-4C61-9B05-FA2D54C48AA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07E3419A-6728-4C61-9B05-FA2D54C48AA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07E3419A-6728-4C61-9B05-FA2D54C48AA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

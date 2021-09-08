@@ -32,6 +32,31 @@
           "lib/net5.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "System.Text.Encodings.Web": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore/5.0.9": {
         "type": "package",
         "dependencies": {
@@ -527,19 +552,13 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "EBookLibrary.Data/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "EBook_Library.Model": "1.0.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.9",
-          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.9"
-        },
+      "System.Text.Encodings.Web/4.5.0": {
+        "type": "package",
         "compile": {
-          "bin/placeholder/EBookLibrary.Data.dll": {}
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
         },
         "runtime": {
-          "bin/placeholder/EBookLibrary.Data.dll": {}
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
         }
       },
       "EBook_Library.Common/1.0.0": {
@@ -550,6 +569,22 @@
         },
         "runtime": {
           "bin/placeholder/EBook_Library.Common.dll": {}
+        }
+      },
+      "EBook_Library.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "EBook_Library.Model": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.9",
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.9"
+        },
+        "compile": {
+          "bin/placeholder/EBook_Library.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EBook_Library.Data.dll": {}
         }
       },
       "EBook_Library.Model/1.0.0": {
@@ -621,6 +656,32 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
         "microsoft.aspnetcore.cryptography.keyderivation.5.0.9.nupkg.sha512",
         "microsoft.aspnetcore.cryptography.keyderivation.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+      "sha512": "Nxs7Z1q3f1STfLYKJSVXCs1iBl+Ya6E8o4Oy1bCxJ/rNI44E/0f6tbsrVqAWfB7jlnJfyaAtIalBVxPKUPQb4Q==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.abstractions/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.xml",
+        "microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "sha512": "ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.features/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
+        "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Identity.EntityFrameworkCore/5.0.9": {
@@ -1440,15 +1501,34 @@
         "version.txt"
       ]
     },
-    "EBookLibrary.Data/1.0.0": {
-      "type": "project",
-      "path": "../EBookLibrary.Data_/EBookLibrary.Data.csproj",
-      "msbuildProject": "../EBookLibrary.Data_/EBookLibrary.Data.csproj"
+    "System.Text.Encodings.Web/4.5.0": {
+      "sha512": "Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
+      "type": "package",
+      "path": "system.text.encodings.web/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard1.0/System.Text.Encodings.Web.xml",
+        "lib/netstandard2.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.0/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.4.5.0.nupkg.sha512",
+        "system.text.encodings.web.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
     },
     "EBook_Library.Common/1.0.0": {
       "type": "project",
       "path": "../EBook_Library.Common/EBook_Library.Common.csproj",
       "msbuildProject": "../EBook_Library.Common/EBook_Library.Common.csproj"
+    },
+    "EBook_Library.Data/1.0.0": {
+      "type": "project",
+      "path": "../EBook_Library.Data/EBook_Library.Data.csproj",
+      "msbuildProject": "../EBook_Library.Data/EBook_Library.Data.csproj"
     },
     "EBook_Library.Model/1.0.0": {
       "type": "project",
@@ -1458,7 +1538,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "EBookLibrary.Data >= 1.0.0",
+      "EBook_Library.Data >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.9",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
@@ -1498,8 +1578,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\hp\\source\\EBook_Library\\EBookLibrary.Data_\\EBookLibrary.Data.csproj": {
-              "projectPath": "C:\\Users\\hp\\source\\EBook_Library\\EBookLibrary.Data_\\EBookLibrary.Data.csproj"
+            "C:\\Users\\hp\\source\\EBook_Library\\EBook_Library.Data\\EBook_Library.Data.csproj": {
+              "projectPath": "C:\\Users\\hp\\source\\EBook_Library\\EBook_Library.Data\\EBook_Library.Data.csproj"
             }
           }
         }

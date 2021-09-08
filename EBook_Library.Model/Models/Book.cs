@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,7 +8,8 @@ namespace EBook_Library.Models
 {
     public class Book
     {
-        public string BookId { get; set; } = new Guid().ToString();
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid BookId { get; set; }
         public string Title { get; set; }
         public string  ISBN { get; set; }
         public string  PublishYear { get; set; }

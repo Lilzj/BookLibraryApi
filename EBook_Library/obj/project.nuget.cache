@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "oyQnG6dXbQS+tfUpSRnUUoLRr/0zpx87Z1XDmBR+t4r9Fd0hNvn7tRnE5p9a4UU1Nex4A7VGlc2P+p3SmtiorQ==",
+  "dgSpecHash": "wIA+5Rvq0dANkEpalxCOK3umwraIvpkSmzPEu4ysO5F+sILVjsSWMTAXSHp0j82e61KgWL+HsntGkvLEc6X5kQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\hp\\source\\EBook_Library\\EBook_Library\\EBook_Library.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.9\\microsoft.aspnetcore.cryptography.internal.5.0.9.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.9\\microsoft.aspnetcore.cryptography.keyderivation.5.0.9.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\5.0.9\\microsoft.aspnetcore.identity.entityframeworkcore.5.0.9.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.9\\microsoft.data.sqlite.core.5.0.9.nupkg.sha512",
@@ -43,7 +45,8 @@
     "C:\\Users\\hp\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
-    "C:\\Users\\hp\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+    "C:\\Users\\hp\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

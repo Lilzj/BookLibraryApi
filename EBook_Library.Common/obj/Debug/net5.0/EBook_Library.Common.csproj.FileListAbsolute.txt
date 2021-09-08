@@ -9,3 +9,4 @@ C:\Users\hp\source\EBook_Library\EBook_Library.Common\obj\Debug\net5.0\EBook_Lib
 C:\Users\hp\source\EBook_Library\EBook_Library.Common\obj\Debug\net5.0\EBook_Library.Common.dll
 C:\Users\hp\source\EBook_Library\EBook_Library.Common\obj\Debug\net5.0\ref\EBook_Library.Common.dll
 C:\Users\hp\source\EBook_Library\EBook_Library.Common\obj\Debug\net5.0\EBook_Library.Common.pdb
+C:\Users\hp\source\EBook_Library\EBook_Library.Common\obj\Debug\net5.0\EBook_Library.Common.csproj.AssemblyReference.cache

@@ -1,4 +1,6 @@
 using EBook_Library.Data;
+using EBook_Library.Models;
+using EBookLibrary.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -44,7 +46,7 @@ namespace EBook_Library
                 options.Password.RequireNonAlphanumeric = true;
             });
 
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddIdentity<AppUser, IdentityRole>()
               .AddEntityFrameworkStores<EBookContext>();
         }
 
@@ -63,6 +65,8 @@ namespace EBook_Library
             app.UseRouting();
 
             app.UseAuthorization();
+
+            Preseeder.EnsurePopulated(app);
 
             app.UseEndpoints(endpoints =>
             {

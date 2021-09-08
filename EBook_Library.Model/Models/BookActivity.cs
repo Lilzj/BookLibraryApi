@@ -9,9 +9,9 @@ namespace EBook_Library.Models
 {
     public class BookActivity
     {
-        public string BookActivityId { get; set; } = new Guid().ToString();
-        public Book Books { get; set; }
-        public AppUser AppUsers { get; set; }
+        public Guid BookActivityId { get; set; }
+        public Book Book { get; set; }
+        public AppUser AppUser { get; set; }
         public decimal PenaltyFee { get; set; }
         public int NoOfDaysLate { get; set; }
         public DateTime CheckOutDate { get; set; } = DateTime.Now;
