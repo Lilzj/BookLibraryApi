@@ -8,12 +8,13 @@ namespace EBook_Library.Models
 {
     public class Book
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid BookId { get; set; }
+        public string BookId { get; set; } = Guid.NewGuid().ToString();
         public string Title { get; set; }
         public string  ISBN { get; set; }
         public string  PublishYear { get; set; }
         public decimal CoverPrice { get; set; }
-        public int AvailabilityStatus { get; set; }
+        public bool AvailabilityStatus { get; set; }
+        public DateTime DateCreated { get; set; } = DateTime.Now;
+        public DateTime DateModeified { get; set; } = DateTime.Now;
     }
 }

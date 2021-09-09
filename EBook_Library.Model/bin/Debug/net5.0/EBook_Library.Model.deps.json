@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v5.0": {
       "EBook_Library.Model/1.0.0": {
         "dependencies": {
-          "EBook_Library.Common": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.11"
         },
         "runtime": {
@@ -249,12 +248,7 @@
       },
       "System.Collections.Immutable/1.7.1": {},
       "System.ComponentModel.Annotations/4.7.0": {},
-      "System.Diagnostics.DiagnosticSource/4.7.1": {},
-      "EBook_Library.Common/1.0.0": {
-        "runtime": {
-          "EBook_Library.Common.dll": {}
-        }
-      }
+      "System.Diagnostics.DiagnosticSource/4.7.1": {}
     }
   },
   "libraries": {
@@ -437,11 +431,6 @@
       "sha512": "sha512-j81Lovt90PDAq8kLpaJfJKV/rWdWuEk6jfV+MBkee33vzYLEUsy4gXK8laa9V2nZlLM9VM9yA/OOQxxPEJKAMw==",
       "path": "system.diagnostics.diagnosticsource/4.7.1",
       "hashPath": "system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
-    },
-    "EBook_Library.Common/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

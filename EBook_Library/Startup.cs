@@ -1,5 +1,10 @@
+using EBook_Library.Common;
+using EBook_Library.Core.Implementation;
+using EBook_Library.Core.Interface;
 using EBook_Library.Data;
+using EBook_Library.Midddlewares;
 using EBook_Library.Models;
+using EBook_Library.Profiles;
 using EBookLibrary.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
 
 namespace EBook_Library
 {
@@ -25,6 +31,10 @@ namespace EBook_Library
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddControllers().AddNewtonsoftJson(o =>
+            {
+                o.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            });
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -48,6 +58,9 @@ namespace EBook_Library
 
             services.AddIdentity<AppUser, IdentityRole>()
               .AddEntityFrameworkStores<EBookContext>();
+            services.AddScoped<IBookRepository, BookRepository>();
+            services.AddScoped<LogService>();
+            services.AddAutoMapper(typeof(MappingProfile));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,6 +76,7 @@ namespace EBook_Library
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            //app.UseMiddleware<RequestLoggingMiddleware>();
 
             app.UseAuthorization();
 

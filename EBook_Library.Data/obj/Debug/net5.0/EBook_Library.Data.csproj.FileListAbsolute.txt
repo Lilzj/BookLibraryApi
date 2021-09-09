@@ -4,10 +4,8 @@ C:\Users\hp\source\EBook_Library\EBook_Library.Data\bin\Debug\net5.0\EBook_Libra
 C:\Users\hp\source\EBook_Library\EBook_Library.Data\bin\Debug\net5.0\EBook_Library.Data.dll
 C:\Users\hp\source\EBook_Library\EBook_Library.Data\bin\Debug\net5.0\ref\EBook_Library.Data.dll
 C:\Users\hp\source\EBook_Library\EBook_Library.Data\bin\Debug\net5.0\EBook_Library.Data.pdb
-C:\Users\hp\source\EBook_Library\EBook_Library.Data\bin\Debug\net5.0\EBook_Library.Common.dll
 C:\Users\hp\source\EBook_Library\EBook_Library.Data\bin\Debug\net5.0\EBook_Library.Model.dll
 C:\Users\hp\source\EBook_Library\EBook_Library.Data\bin\Debug\net5.0\EBook_Library.Model.pdb
-C:\Users\hp\source\EBook_Library\EBook_Library.Data\bin\Debug\net5.0\EBook_Library.Common.pdb
 C:\Users\hp\source\EBook_Library\EBook_Library.Data\obj\Debug\net5.0\EBook_Library.Data.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\hp\source\EBook_Library\EBook_Library.Data\obj\Debug\net5.0\EBook_Library.Data.AssemblyInfoInputs.cache
 C:\Users\hp\source\EBook_Library\EBook_Library.Data\obj\Debug\net5.0\EBook_Library.Data.AssemblyInfo.cs
@@ -17,3 +15,4 @@ C:\Users\hp\source\EBook_Library\EBook_Library.Data\obj\Debug\net5.0\EBook_Libra
 C:\Users\hp\source\EBook_Library\EBook_Library.Data\obj\Debug\net5.0\ref\EBook_Library.Data.dll
 C:\Users\hp\source\EBook_Library\EBook_Library.Data\obj\Debug\net5.0\EBook_Library.Data.pdb
 C:\Users\hp\source\EBook_Library\EBook_Library.Data\obj\Debug\net5.0\EBook_Library.Data.genruntimeconfig.cache
+C:\Users\hp\source\EBook_Library\EBook_Library.Data\obj\Debug\net5.0\EBook_Library.Data.csproj.AssemblyReference.cache

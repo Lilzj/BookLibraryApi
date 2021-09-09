@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EBook_Library.Data\EBook_Library.Data.csproj" />
+    <ProjectReference Include="..\EBook_Library.Model\EBook_Library.Model.csproj" />
+  </ItemGroup>
+
 </Project>

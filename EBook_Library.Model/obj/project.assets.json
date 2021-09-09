@@ -289,16 +289,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
-      },
-      "EBook_Library.Common/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/EBook_Library.Common.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/EBook_Library.Common.dll": {}
-        }
       }
     }
   },
@@ -815,16 +805,10 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "EBook_Library.Common/1.0.0": {
-      "type": "project",
-      "path": "../EBook_Library.Common/EBook_Library.Common.csproj",
-      "msbuildProject": "../EBook_Library.Common/EBook_Library.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "EBook_Library.Common >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.11"
     ]
   },
@@ -862,11 +846,7 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {
-            "C:\\Users\\hp\\source\\EBook_Library\\EBook_Library.Common\\EBook_Library.Common.csproj": {
-              "projectPath": "C:\\Users\\hp\\source\\EBook_Library\\EBook_Library.Common\\EBook_Library.Common.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.16" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.9">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -13,7 +15,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EBook_Library.Common\EBook_Library.Common.csproj" />
+    <ProjectReference Include="..\EBook_Library.Core\EBook_Library.Core.csproj" />
     <ProjectReference Include="..\EBook_Library.Data\EBook_Library.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Internal_Log\" />
+    <Folder Include="Logs\" />
   </ItemGroup>
 
 </Project>

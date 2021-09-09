@@ -10,3 +10,8 @@ C:\Users\hp\source\EBook_Library\EBook_Library.Core\obj\Debug\net5.0\EBook_Libra
 C:\Users\hp\source\EBook_Library\EBook_Library.Core\obj\Debug\net5.0\EBook_Library.Core.dll
 C:\Users\hp\source\EBook_Library\EBook_Library.Core\obj\Debug\net5.0\ref\EBook_Library.Core.dll
 C:\Users\hp\source\EBook_Library\EBook_Library.Core\obj\Debug\net5.0\EBook_Library.Core.pdb
+C:\Users\hp\source\EBook_Library\EBook_Library.Core\bin\Debug\net5.0\EBook_Library.Data.dll
+C:\Users\hp\source\EBook_Library\EBook_Library.Core\bin\Debug\net5.0\EBook_Library.Model.dll
+C:\Users\hp\source\EBook_Library\EBook_Library.Core\bin\Debug\net5.0\EBook_Library.Data.pdb
+C:\Users\hp\source\EBook_Library\EBook_Library.Core\bin\Debug\net5.0\EBook_Library.Model.pdb
+C:\Users\hp\source\EBook_Library\EBook_Library.Core\obj\Debug\net5.0\EBook_Library.Core.csproj.CopyComplete
