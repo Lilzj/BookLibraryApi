@@ -16,9 +16,11 @@ namespace EBook_Library.Controllers
     [ApiController]
     public class BookController : ControllerBase
     {
+
         private readonly IBookRepository _repo;
         private readonly LogService _log;
         private readonly IMapper _mapper;
+
         public BookController(IBookRepository repo, LogService log, IMapper mapper)
         {
             _repo = repo;
@@ -26,15 +28,16 @@ namespace EBook_Library.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetBookById(string bookId)
+
+        [HttpGet("{id}", Name = "GetBook")]
+        public async Task<IActionResult> GetBookById(string id)
         {
-            if (string.IsNullOrWhiteSpace(bookId))
+            if (string.IsNullOrWhiteSpace(id))
             {
                 ModelState.AddModelError("Book", "BookId Cannot be null");
                 return NotFound(Utilities.CreateResponse(message: "BookId not found", errs: ModelState, ""));
             }
-            var book = await _repo.GetBookByIdAsync(bookId);
+            var book = await _repo.GetBookByIdAsync(id);
 
             if (book == null)
             {
@@ -44,17 +47,21 @@ namespace EBook_Library.Controllers
 
             var bookReturn = _mapper.Map<Book, BookReturnDto>(book);
 
-            return Ok(bookReturn);
+            return Ok(Utilities.CreateResponse("Book Details", null, bookReturn));
         }
 
 
         [HttpPost]
         public async Task<IActionResult> AddBook(AddBookDto model)
         {
-            if (!ModelState.IsValid)
+            Request.Headers.TryGetValue("Username", out var headerValue);
+            if(headerValue!="user")
             {
-                return BadRequest(Utilities.CreateResponse(message: "Model state error", errs: ModelState, data: ""));   
+                return Unauthorized();
             }
+
+            if (!ModelState.IsValid)
+                return BadRequest(Utilities.CreateResponse(message: "Model state error", errs: ModelState, data: ""));   
 
              var book = _mapper.Map<AddBookDto, Book>(model);
 
@@ -70,6 +77,25 @@ namespace EBook_Library.Controllers
 
             return CreatedAtRoute("GetBook", new { id =  bookReturn.BookId},
                 Utilities.CreateResponse(message: "Added sucessfully", errs: null, data: bookReturn)); 
+        }
+
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchBook([FromQuery] SearchDto query)
+        {
+            if (query == null)
+                return BadRequest(Utilities.CreateResponse("No search parameter was provided", errs: ModelState, data: ""));
+
+            var books =await  _repo.SearchBook(query);
+
+            if (books == null)
+            {
+                ModelState.AddModelError("Book not found", $"No book found for {query} entered");
+                return NotFound(Utilities.CreateResponse(message: "Book not found", errs: ModelState, ""));
+            }
+
+            var response = _mapper.Map<IEnumerable<Book>, IEnumerable<BookReturnDto>>(books);
+
+            return Ok(Utilities.CreateResponse(message: "Books gotten", errs: null, data: response));
         }
     }
 }

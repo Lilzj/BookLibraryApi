@@ -1,4 +1,5 @@
-﻿using EBook_Library.Models;
+﻿using EBook_Library.Model.Dto;
+using EBook_Library.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,10 @@ namespace EBook_Library.Core.Interface
 {
     public interface IBookRepository
     {
-        public Task<bool> AddBookAsync(Book book);
-        public Task<Book> GetBookByIdAsync(string bookId);
+        Task<bool> AddBookAsync(Book book);
+        Task<Book> GetBookByIdAsync(string bookId);
+        Task<IEnumerable<Book>> SearchBook(SearchDto query);
+        Task<IEnumerable<Book>> GetAllBooksAsync();
+
     }
 }
