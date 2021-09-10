@@ -2,21 +2,16 @@ using EBook_Library.Common;
 using EBook_Library.Core.Implementation;
 using EBook_Library.Core.Interface;
 using EBook_Library.Data;
-using EBook_Library.Midddlewares;
-using EBook_Library.Models;
 using EBook_Library.Profiles;
 using EBookLibrary.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
-using NLog;
-using System.IO;
 
 namespace EBook_Library
 {
@@ -44,21 +39,6 @@ namespace EBook_Library
             services.AddDbContextPool<EBookContext>(option => option
             .UseSqlite(Configuration.GetConnectionString("DatabaseConnection")));
 
-            services.Configure<IdentityOptions>(options =>
-            {
-                //Require each user to have a uniqe email
-                options.User.RequireUniqueEmail = true;
-
-                //Password configuratiosn
-                options.Password.RequireDigit = true;
-                options.Password.RequireLowercase = true;
-                options.Password.RequireUppercase = true;
-                options.Password.RequiredLength = 8;
-                options.Password.RequireNonAlphanumeric = true;
-            });
-
-            services.AddIdentity<AppUser, IdentityRole>()
-              .AddEntityFrameworkStores<EBookContext>();
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<LogService>();
             services.AddAutoMapper(typeof(MappingProfile));

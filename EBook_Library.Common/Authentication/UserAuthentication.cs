@@ -12,7 +12,7 @@ namespace EBook_Library.Common
         public static UserAuth Authenticate(IHeaderDictionary header)
         {
             var userAuth = new UserAuth();
-            var adminCheck = (string)header["Admin"];//.TryGetValue("Admin", out var headerValueAdmin);
+            var adminCheck = (string)header["Admin"];
             var userCheck = (string)header["Username"];
 
             if ((adminCheck == null && userCheck == null) || (adminCheck != "1" && userCheck != "user"))

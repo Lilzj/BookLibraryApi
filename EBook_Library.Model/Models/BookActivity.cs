@@ -10,7 +10,10 @@ namespace EBook_Library.Models
     {
         public string BookActivityId { get; set; }
         public Book Book { get; set; }
-        public AppUser AppUser { get; set; }
+        public string FullName { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public string NIN { get; set; }
         public decimal PenaltyFee { get; set; }
         public int NoOfDaysLate { get; set; }
         public DateTime CheckOutDate { get; set; } = DateTime.Now;
