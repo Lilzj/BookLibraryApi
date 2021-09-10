@@ -7,9 +7,6 @@ C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\EBook_Library.ru
 C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\EBook_Library.dll
 C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\ref\EBook_Library.dll
 C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\EBook_Library.pdb
-C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\Microsoft.Data.Sqlite.dll
 C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
@@ -18,8 +15,6 @@ C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\Microsoft.Entity
 C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Sqlite.dll
 C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\SQLitePCLRaw.batteries_v2.dll
 C:\Users\hp\source\EBook_Library\EBook_Library\bin\Debug\net5.0\SQLitePCLRaw.nativelibrary.dll
