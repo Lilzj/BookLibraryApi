@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
+using NLog;
+using System.IO;
 
 namespace EBook_Library
 {
@@ -19,6 +21,7 @@ namespace EBook_Library
     {
         public Startup(IConfiguration configuration)
         {
+            LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/Nlog.config"));
             Configuration = configuration;
         }
         public IConfiguration Configuration { get; }
@@ -40,6 +43,7 @@ namespace EBook_Library
             .UseSqlite(Configuration.GetConnectionString("DatabaseConnection")));
 
             services.AddScoped<IBookRepository, BookRepository>();
+            services.AddScoped<ICheckOutRepository, CheckOutRepository>();
             services.AddScoped<LogService>();
             services.AddAutoMapper(typeof(MappingProfile));
         }

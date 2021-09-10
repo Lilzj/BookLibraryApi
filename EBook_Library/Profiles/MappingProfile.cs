@@ -14,6 +14,12 @@ namespace EBook_Library.Profiles
         {
             CreateMap<AddBookDto, Book>().ReverseMap();
             CreateMap<Book, BookReturnDto>().ReverseMap();
+            CreateMap<CheckoutDto, BookActivity>().ReverseMap();
+            CreateMap<BookActivity, CheckoutReturnDto>()
+                 .ForMember(CheckoutReturnDto => CheckoutReturnDto.BookId, x =>
+                x.MapFrom(Book => Book.Book.BookId));
+
+            CreateMap<BookActivity, BookActivityDto>();
         }
     }
 }

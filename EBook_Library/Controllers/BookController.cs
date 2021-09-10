@@ -40,7 +40,7 @@ namespace EBook_Library.Controllers
             if (string.IsNullOrWhiteSpace(id))
             {
                 ModelState.AddModelError("Book", "BookId Cannot be null");
-                return NotFound(Utilities.CreateResponse(message: "BookId not found", errs: ModelState, ""));
+                return BadRequest(Utilities.CreateResponse(message: "BookId not found", errs: ModelState, ""));
             }
             var book = await _repo.GetBookByIdAsync(id);
 
@@ -65,7 +65,7 @@ namespace EBook_Library.Controllers
                 return Unauthorized();
 
             if (!userAuth.IsAdmin)
-                return Forbid();
+                return Unauthorized();
 
             if (!ModelState.IsValid)
                 return BadRequest(Utilities.CreateResponse(message: "Model state error", errs: ModelState, data: ""));   
@@ -124,5 +124,7 @@ namespace EBook_Library.Controllers
 
             return Ok(Utilities.CreateResponse(message: "All Books sorted by Publish year in ascending order", errs: null, data: bookReturn));
         }
+
+       
     }
 }

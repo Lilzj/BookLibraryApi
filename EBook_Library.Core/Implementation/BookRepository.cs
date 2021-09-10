@@ -40,7 +40,8 @@ namespace EBook_Library.Core.Implementation
 
         public async Task<Book> GetBookByIdAsync(string bookId)
         {
-            var book = await _ctx.Books.FirstOrDefaultAsync(x => x.BookId == bookId);
+            var book = await _ctx.Books.Include(x => x.bookActivities.OrderBy(x => x.CheckOutDate))
+                .FirstOrDefaultAsync(x => x.BookId == bookId);
 
             return book;
         }
@@ -61,6 +62,13 @@ namespace EBook_Library.Core.Implementation
         public async Task<IEnumerable<Book>> GetAllBooksAsync()
         {
             return await _ctx.Books.OrderBy(x => x.PublishYear).ToListAsync();
+        }
+
+        public async Task<bool> UpdateAsync(Book book)
+        {
+             _ctx.Update(book);
+
+            return await SavedAsync();
         }
     }
 }

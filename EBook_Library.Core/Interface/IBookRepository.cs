@@ -14,6 +14,7 @@ namespace EBook_Library.Core.Interface
         Task<Book> GetBookByIdAsync(string bookId);
         Task<IEnumerable<Book>> SearchBook(SearchDto query);
         Task<IEnumerable<Book>> GetAllBooksAsync();
+        Task<bool> UpdateAsync(Book book);
 
     }
 }

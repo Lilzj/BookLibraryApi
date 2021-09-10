@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EBook_Library.Data.Migrations
 {
     [DbContext(typeof(EBookContext))]
-    [Migration("20210910085848_initial")]
+    [Migration("20210910102239_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,7 +57,7 @@ namespace EBook_Library.Data.Migrations
                     b.Property<string>("BookId")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("CheckInDate")
+                    b.Property<DateTime?>("CheckInDate")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CheckOutDate")

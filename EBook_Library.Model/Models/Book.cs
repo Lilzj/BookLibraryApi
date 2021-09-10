@@ -16,5 +16,6 @@ namespace EBook_Library.Models
         public bool AvailabilityStatus { get; set; }
         public DateTime DateCreated { get; set; } = DateTime.Now;
         public DateTime DateModeified { get; set; } = DateTime.Now;
+        public IEnumerable<BookActivity> bookActivities { get; set; }
     }
 }

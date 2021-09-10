@@ -55,7 +55,7 @@ namespace EBook_Library.Data.Migrations
                     b.Property<string>("BookId")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("CheckInDate")
+                    b.Property<DateTime?>("CheckInDate")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CheckOutDate")

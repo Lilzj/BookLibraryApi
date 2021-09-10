@@ -38,7 +38,7 @@ namespace EBook_Library.Data.Migrations
                     PenaltyFee = table.Column<decimal>(type: "TEXT", nullable: false),
                     NoOfDaysLate = table.Column<int>(type: "INTEGER", nullable: false),
                     CheckOutDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    CheckInDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    CheckInDate = table.Column<DateTime>(type: "TEXT", nullable: true),
                     ExpectedDateOfReturn = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>

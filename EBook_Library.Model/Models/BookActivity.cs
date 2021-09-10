@@ -8,7 +8,7 @@ namespace EBook_Library.Models
 {
     public class BookActivity
     {
-        public string BookActivityId { get; set; }
+        public string BookActivityId { get; set; } = Guid.NewGuid().ToString();
         public Book Book { get; set; }
         public string FullName { get; set; }
         public string Email { get; set; }
@@ -17,7 +17,7 @@ namespace EBook_Library.Models
         public decimal PenaltyFee { get; set; }
         public int NoOfDaysLate { get; set; }
         public DateTime CheckOutDate { get; set; } = DateTime.Now;
-        public DateTime CheckInDate { get; set; }
+        public DateTime? CheckInDate { get; set; } = null;
         public DateTime ExpectedDateOfReturn { get; set; }
 
         public BookActivity()

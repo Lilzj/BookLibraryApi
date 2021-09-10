@@ -14,5 +14,6 @@ namespace EBook_Library.Model.Dto
         public string PublishYear { get; set; }
         public decimal CoverPrice { get; set; }
         public bool AvailabilityStatus { get; set; }
+        public IEnumerable<BookActivityDto> bookActivities { get; set; }
     }
 }
