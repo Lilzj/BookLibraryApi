@@ -57,6 +57,10 @@
             "NLog.Extensions.Logging": {
               "target": "Package",
               "version": "[1.7.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             }
           },
           "imports": [

@@ -60,7 +60,7 @@ namespace EBook_Library.Core.Implementation
 
         public async Task<IEnumerable<Book>> GetAllBooksAsync()
         {
-            return await _ctx.Books.ToListAsync();
+            return await _ctx.Books.OrderBy(x => x.PublishYear).ToListAsync();
         }
     }
 }

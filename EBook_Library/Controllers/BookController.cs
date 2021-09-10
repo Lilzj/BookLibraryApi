@@ -32,6 +32,11 @@ namespace EBook_Library.Controllers
         [HttpGet("{id}", Name = "GetBook")]
         public async Task<IActionResult> GetBookById(string id)
         {
+            var userAuth = UserAuthentication.Authenticate(Request.Headers);
+
+            if (!userAuth.IsAuthenticated)
+                return Unauthorized();
+
             if (string.IsNullOrWhiteSpace(id))
             {
                 ModelState.AddModelError("Book", "BookId Cannot be null");
@@ -54,11 +59,13 @@ namespace EBook_Library.Controllers
         [HttpPost]
         public async Task<IActionResult> AddBook(AddBookDto model)
         {
-            Request.Headers.TryGetValue("Username", out var headerValue);
-            if(headerValue!="user")
-            {
+            var userAuth = UserAuthentication.Authenticate(Request.Headers);
+
+            if (!userAuth.IsAuthenticated)
                 return Unauthorized();
-            }
+
+            if (!userAuth.IsAdmin)
+                return Forbid();
 
             if (!ModelState.IsValid)
                 return BadRequest(Utilities.CreateResponse(message: "Model state error", errs: ModelState, data: ""));   
@@ -82,6 +89,11 @@ namespace EBook_Library.Controllers
         [HttpGet("search")]
         public async Task<IActionResult> SearchBook([FromQuery] SearchDto query)
         {
+            var userAuth = UserAuthentication.Authenticate(Request.Headers);
+
+            if (!userAuth.IsAuthenticated)
+                return Unauthorized();
+
             if (query == null)
                 return BadRequest(Utilities.CreateResponse("No search parameter was provided", errs: ModelState, data: ""));
 
@@ -96,6 +108,21 @@ namespace EBook_Library.Controllers
             var response = _mapper.Map<IEnumerable<Book>, IEnumerable<BookReturnDto>>(books);
 
             return Ok(Utilities.CreateResponse(message: "Books gotten", errs: null, data: response));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllBooks()
+        {
+            var userAuth = UserAuthentication.Authenticate(Request.Headers);
+
+            if (!userAuth.IsAuthenticated)
+                return Unauthorized();
+
+            var books = await _repo.GetAllBooksAsync();
+
+            var bookReturn = _mapper.Map<IEnumerable<BookReturnDto>>(books);
+
+            return Ok(Utilities.CreateResponse(message: "All Books sorted by Publish year in ascending order", errs: null, data: bookReturn));
         }
     }
 }
